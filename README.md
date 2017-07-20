@@ -6,8 +6,8 @@ A converter between PyTorch and Caffe.
 - [x] Parse PyTroch model
 - [x] Auto-generate prototxt files used by Caffe
 - [x] Convert a toy model (i.e. with only basic layers such as `conv`, `relu` and `fc`)
-- [ ] Add more options, such as whether using `bias` term
-- [ ] Convert AlexNet, VGGNet
+- [x] Add more options, such as whether using `bias` term
+- [x] Convert AlexNet, VGGNet
 - [ ] Support `BatchNorm Layer`
 - [ ] Support more complicated structure (e.g. shortcut, inception)
 - [ ] Convert InceptionNet
