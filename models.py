@@ -47,8 +47,13 @@ class ToyNet(nn.Module):
     """
     def __init__(self, num_classes=1000):
         super(ToyNet, self).__init__()
-        self.layer = nn.Linear(10, num_classes)
+        self.conv = nn.Conv2d(3, 3, kernel_size=3, stride=1, padding=0)
+        self.relu = nn.ReLU(inplace=True)
+        self.fc = nn.Linear(3, num_classes)
 
     def forward(self, x):
-        out = self.layer(x)
+        x = self.conv(x)
+        x = self.relu(x)
+        x = x.view(x.size(0), 3)
+        out = self.fc(x)
         return out
